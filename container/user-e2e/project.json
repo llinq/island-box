@@ -1,0 +1,16 @@
+{
+  "name": "user-e2e",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "user-e2e/src",
+  "implicitDependencies": ["user"],
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": ["{workspaceRoot}/dist/.playwright/user-e2e"],
+      "options": {
+        "config": "user-e2e/playwright.config.ts"
+      }
+    }
+  }
+}

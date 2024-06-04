@@ -1,0 +1,16 @@
+{
+  "name": "web-with-remote-e2e",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "web-with-remote-e2e/src",
+  "implicitDependencies": ["web-with-remote"],
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": ["{workspaceRoot}/dist/.playwright/web-with-remote-e2e"],
+      "options": {
+        "config": "web-with-remote-e2e/playwright.config.ts"
+      }
+    }
+  }
+}
